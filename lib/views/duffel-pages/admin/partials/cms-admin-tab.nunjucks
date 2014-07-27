@@ -1,18 +1,17 @@
-<div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController" >
+<div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController" 
+  cg-busy="blockingPromises" ng-init="page_id = {$ page.id $}">
   <div>
     <label>
       Title:
     </label>
-    <input name="title" placeholder="Page title" ng-model="title" ng-init="title = '{$ page.title $}'" />
+    <input name="title" placeholder="Page title" ng-model="page.title" />
   </div>
 
-  {% for cmsContent in cmsContents %}
-    <div>
-      <label>{$ cmsContent.name $}</label>
-      <textarea class="cms-block" data-type="{$ cmsContent.type $}" data-inline="true" ng-init="cmsContent['{$ cmsContent.name $}'] = '{$ cmsContent.html | escape $}'"
-        name="{$ cmsContent.name $}" ng-model="cmsContent['{$ cmsContent.name $}']">{$ cmsContent.html $}</textarea>
-    </div>
-  {% endfor %}
-  
+  <div ng-repeat="cmsContent in cmsPageContents">
+    <label>{{ cmsContent.name }}</label>
+    <textarea raptor data-type="{{ cmsContent.type }}" data-inline="true"
+      name="{{ cmsContent.name }}" ng-model="cmsContent.html">{{ cmsContent.html }}</textarea>
+  </div>
+
   <button ng-click="save()">Save</button>
 </div>
