@@ -2,13 +2,13 @@
   'use strict';
 
   angular.module('admin-page-content', [
-    'page', 'raptor',
+    'page', 'cmsPageContent',
     'admin-page-content.controllers',
-    'cgBusy'
+    'raptor', 'cgBusy'
   ]);
 
   angular.module('admin-page-content').value('cgBusyDefaults',{
-      message: 'Saving content',
+      message: 'Working...',
       templateUrl: '/bower/angular-busy/angular-busy.html',
       minDuration: 700
   });
