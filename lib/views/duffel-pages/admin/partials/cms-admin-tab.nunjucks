@@ -1,0 +1,18 @@
+<div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController" >
+  <div>
+    <label>
+      Title:
+    </label>
+    <input name="title" placeholder="Page title" ng-model="title" ng-init="title = '{$ page.title $}'" />
+  </div>
+
+  {% for cmsContent in cmsContents %}
+    <div>
+      <label>{$ cmsContent.name $}</label>
+      <textarea class="cms-block" data-type="{$ cmsContent.type $}" data-inline="true" ng-init="cmsContent['{$ cmsContent.name $}'] = '{$ cmsContent.html | escape $}'"
+        name="{$ cmsContent.name $}" ng-model="cmsContent['{$ cmsContent.name $}']">{$ cmsContent.html $}</textarea>
+    </div>
+  {% endfor %}
+  
+  <button ng-click="save()">Save</button>
+</div>
