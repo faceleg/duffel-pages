@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "mongoose-times": "",
-    "controller-loader": ""
+    "controller-loader": "",
+    "tea-error": "latest",
+    "bluebird": "latest",
+    "underscore": "latest"
   }
 }
