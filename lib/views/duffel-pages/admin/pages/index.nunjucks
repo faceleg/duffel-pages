@@ -1,0 +1,30 @@
+{% extends "/layouts/default-admin.nunjucks" %}
+
+{% block title %}Pages{% endblock %}
+
+{% block content %}
+    <div class="duffel-admin-wrapper">
+        <h1 class="text-center">Pages</h1>
+        <div class="ng-application" application-name="admin-pages"
+            ng-controller="IndexController">
+            <div>
+
+              <button ng-click="adminPageTableParams.reload()" class="btn btn-default"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+              <a class="btn btn-primary" href="/pages/admin/create"><i class="glyphicon glyphicon-plus"></i> Create Page</a>
+
+              <table ng-table="adminPageTableParams" show-filter="true" class="table" cg-busy="blockingPromises">
+                <tbody>
+                  <tr ng-repeat="page in $data">
+                    <td data-title="'Title'" filter="{ 'title': 'text' }" sortable="'title'">
+                      {{ page.title }}
+                    </td>
+                    <td data-title="'Actions'">
+                      <a href="/pages/admin/{{ page.id }}/content">Edit</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
