@@ -1,4 +1,4 @@
-<div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController" 
+<div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController"
   cg-busy="blockingPromises" ng-init="page_id = {$ page.id $}">
   <div>
     <label>
@@ -13,5 +13,5 @@
       name="{{ cmsContent.name }}" ng-model="cmsContent.html">{{ cmsContent.html }}</textarea>
   </div>
 
-  <button ng-click="save()">Save</button>
+  <button class="btn btn-primary" ng-click="save()">Save</button>
 </div>
