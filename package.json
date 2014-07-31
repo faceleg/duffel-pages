@@ -1,13 +1,13 @@
 {
   "name": "duffel-pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Michael Robinso <mike@pagesofinterest.net>",
   "description": "Enables basic page administration",
   "contributors": [
     {
-    "name": "Michael Robinson",
-    "email": "mike@pagesofinterest.net"
-  }
+      "name": "Michael Robinson",
+      "email": "mike@pagesofinterest.net"
+    }
   ],
   "repository": {
     "type": "git",
