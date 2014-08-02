@@ -14,7 +14,6 @@
     "url": "https://github.com/BrownPaperBag/duffel-pages"
   },
   "dependencies": {
-    "mongoose-times": "",
     "controller-loader": "",
     "tea-error": "latest",
     "bluebird": "latest",
