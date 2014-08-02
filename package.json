@@ -17,6 +17,7 @@
     "controller-loader": "",
     "tea-error": "latest",
     "bluebird": "latest",
-    "underscore": "latest"
+    "underscore": "latest",
+    "loopback-datasource-juggler-paginate": "latest"
   }
 }
