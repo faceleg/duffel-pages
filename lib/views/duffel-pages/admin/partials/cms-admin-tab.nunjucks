@@ -1,10 +1,16 @@
 <div class="ng-application" application-name="admin-page-content" ng-controller="PageContentController"
   cg-busy="blockingPromises" ng-init="page_id = {$ page.id $}">
   <div>
-    <label>
-      Title:
-    </label>
-    <input name="title" placeholder="Page title" ng-model="page.title" />
+    <div>
+      <label>Title:</label>
+      <input name="title" placeholder="Page title" ng-model="page.title" />
+    </div>
+
+    <div>
+      <label>URI:</label>
+      <input name="uri" placeholder="Page URI" ng-model="page.uri" ng-disabled="page.type !== 'CMS'" />
+      <span ng-hide="page.type == 'CMS'">Page URI is not editable for {{ page.type }} pages</span>
+    </div>
   </div>
 
   <div ng-repeat="cmsContent in cmsPageContents">
