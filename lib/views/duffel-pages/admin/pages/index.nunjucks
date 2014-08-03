@@ -19,7 +19,7 @@
                       {{ page.title }}
                     </td>
                     <td data-title="'Actions'">
-                      <a href="/pages/admin/{{ page.id }}/content">Edit</a>
+                      <a class="btn btn-xs btn-primary" href="/pages/admin/{{ page.id }}/content">Edit</a>
                     </td>
                   </tr>
                 </tbody>
