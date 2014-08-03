@@ -1,7 +1,7 @@
 angular.module('page', ['ngResource'])
   .factory('Page', [
-    '$resource', '$http', '$rootScope',
-    function($resource, $http, $rootScope) {
+    '$resource', '$http',
+    function($resource, $http) {
 
     return $resource('/duffel-pages/api/pages/:id:command', {
       id : '@id'
